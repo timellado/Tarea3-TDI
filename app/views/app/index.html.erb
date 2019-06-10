@@ -1,0 +1,29 @@
+<div class="intro">
+  <h1>Películas Star Wars</h1>
+  <p>Bienvenido a la página informativa de STAR WARS</p>
+  <p>Consumo de la api <a href="https://swapi.co">https://swapi.co</a></p>
+</div>
+
+<div class="general">
+  <table>
+    <thead>
+      <th>Nombre</th>
+      <th>Episodio</th>
+      <th>Director</th>
+      <th>Productor(es)</th>
+      <th>Fecha lanzamiento</th>
+    </thead>
+    <tbody>
+      <% @films.each do |film| %>
+      <tr>
+        <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", url: film["url"]} %></td>
+        <td><%= film["episode_id"] %></td>
+        <td><%= film["director"] %></td>
+        <td><%= film["producer"] %></td>
+        <td><%= film["release_date"] %></td>
+        <td class="hover"><%= link_to "más info", {controller: "app", action: "film", url: film["url"]} %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

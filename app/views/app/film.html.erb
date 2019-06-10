@@ -1,0 +1,61 @@
+<div class="intro">
+  <h2>Película </h2>
+  <h1><%= @film["title"] %></h1>
+</div>
+
+<div class="general">
+  <table>
+    <thead>
+      <th>Nombre</th>
+      <th>Episodio</th>
+      <th>Director</th>
+      <th>Productor(es)</th>
+      <th>Fecha lanzamiento</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @film["title"]%></td>
+        <td><%= @film["episode_id"] %></td>
+        <td><%= @film["director"] %></td>
+        <td><%= @film["producer"] %></td>
+        <td><%= @film["release_date"] %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="people">
+  <table>
+    <thead>
+      <th>Personajes</th>
+    </thead>
+    <tbody>
+      <% @people.each do |person| %>
+        <td class="hover"><%= link_to person[:name], {controller: "app", action: "person", url: person[:url]} %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="planets">
+  <table>
+    <thead>
+      <th>Planetas</th>
+    </thead>
+    <tbody>
+        <% @planets.each do |planet| %>
+        <td class="hover"><%= link_to planet[:name], {controller: "app", action: "planet", url: planet[:url]} %></td>
+        <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="starships">
+  <table>
+    <thead>
+      <th>Naves</th>
+    </thead>
+    <tbody>
+        <% @starships.each do |starship| %>
+        <td class="hover"><%= link_to starship[:name], {controller: "app", action: "starship", url: starship[:url]} %></td>
+        <% end %>
+    </tbody>
+  </table>
+</div>

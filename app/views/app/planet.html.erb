@@ -1,0 +1,66 @@
+<div class="intro">
+  <h2>Planeta </h2>
+  <h1><%= @planet["name"] %></h1>
+</div>
+
+<div class="general">
+  <table class="planets-table">
+    <thead>
+      <th>Nombre</th>
+      <th>Período rotacional</th>
+      <th>Período orbital</th>
+      <th>Diametro</th>
+      <th>Clima</th>
+      <th>Gravedad</th>
+      <th>Terreno</th>
+      <th>Agua en superficie</th>
+      <th>Población</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%=@planet["name"]%></td>
+        <td><%=@planet["rotation_period"]%></td>
+        <td><%=@planet["orbital_period"]%></td>
+        <td><%=@planet["diameter"]%></td>
+        <td><%=@planet["climate"]%></td>
+        <td><%=@planet["gravity"]%></td>
+        <td><%=@planet["terrain"]%></td>
+        <td><%=@planet["surface_water"]%></td>
+        <td><%=@planet["population"]%></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div class="people">
+  <table>
+    <thead>
+      <th>Residentes</th>
+    </thead>
+    <tbody>
+      <% if @resident %>
+        <% @residents.each do |res| %>
+          <td class="hover"><%= link_to res[:name], {controller: "app", action: "person", url: res[:url]} %></td>
+        <% end %>
+      <% else %>
+        <td>No hay residentes</td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="films">
+  <table>
+    <thead>
+      <th>Películas</th>
+    </thead>
+    <tbody>
+      <% if @films != []%>
+        <% @films.each do |film| %>
+          <td class="hover"><%= link_to film[:name], {controller: "app", action: "film", url: film[:url]} %></td>
+        <% end %>
+      <% else %>
+        <td>No aparece en películas</td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
