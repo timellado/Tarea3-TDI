@@ -41,7 +41,11 @@
         <td>
           <%= @terrains_show %>
         </td>
-        <td><%=@planet["surfaceWater"]%></td>
+        <% if @planet["surfaceWater"]%>
+          <td><%=@planet["surfaceWater"]%></td>
+        <% else %>
+          <td> No tiene agua</td>
+        <% end %>
         <td><%=@planet["population"]%></td>
       </tr>
     </tbody>
