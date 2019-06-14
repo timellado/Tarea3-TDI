@@ -24,11 +24,3 @@ Nave espacial de la saga con su información, donde se puede visitar a los pilot
 
 Planeta de la saga con su información, desde la que puedes pulsar las películas en donde aparece y los residentes que tiene.
 
-#### Buscador
-
-Funcionalidad que permite buscar películas por su título, personas por su nombre, Naves espaciales por nombre o modelo y planetas por su nombre. 
-
-
-
-
-   [SWAPInfo]: <https://github.com/joemccann/dillinger>
