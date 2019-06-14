@@ -53,7 +53,7 @@
       <th>Naves</th>
     </thead>
     <tbody>
-      <% if @starship != [] %>
+      <% if @starships != [] %>
         <% @starships.each do |starship| %>
         <td class="hover"><%= link_to starship["name"], {controller: "app", action: "starship", id: starship["id"]} %></td>
         <% end %>
