@@ -9,15 +9,6 @@
   </head>
 
   <body>
-    <nav>
-      <div class="buscador">
-        <%= form_tag(controller: "app", action: "search") do %>
-          <%= label_tag(:q, "Buscar:") %>
-          <%= text_field_tag(:q) %>
-          <%= submit_tag("Buscar") %>
-        <% end %>
-      </div>
-    </nav>
     <%= yield %>
   </body>
 </html>

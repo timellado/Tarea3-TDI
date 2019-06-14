@@ -19,13 +19,29 @@
     <tbody>
       <tr>
         <td><%=@planet["name"]%></td>
-        <td><%=@planet["rotation_period"]%></td>
-        <td><%=@planet["orbital_period"]%></td>
+        <td><%=@planet["rotationPeriod"]%></td>
+        <td><%=@planet["orbitalPeriod"]%></td>
         <td><%=@planet["diameter"]%></td>
-        <td><%=@planet["climate"]%></td>
+        <% @climates = @planet["climates"] %>
+        <% @climates_show = "" %>
+        <% @climates.each do |climate| %>
+          <% @climates_show += climate + ", "%>
+        <% end %>
+        <% @climates_show = @climates_show[0..-3] %>
+        <td>
+          <%= @climates_show %>
+        </td>
         <td><%=@planet["gravity"]%></td>
-        <td><%=@planet["terrain"]%></td>
-        <td><%=@planet["surface_water"]%></td>
+        <% @terrains = @planet["terrains"] %>
+        <% @terrains_show = "" %>
+        <% @terrains.each do |terrain| %>
+          <% @terrains_show += terrain + ", "%>
+        <% end %>
+        <% @terrains_show = @terrains_show[0..-3] %>
+        <td>
+          <%= @terrains_show %>
+        </td>
+        <td><%=@planet["surfaceWater"]%></td>
         <td><%=@planet["population"]%></td>
       </tr>
     </tbody>
@@ -38,9 +54,9 @@
       <th>Residentes</th>
     </thead>
     <tbody>
-      <% if @resident %>
+      <% if @residents %>
         <% @residents.each do |res| %>
-          <td class="hover"><%= link_to res[:name], {controller: "app", action: "person", url: res[:url]} %></td>
+          <td class="hover"><%= link_to res["name"], {controller: "app", action: "person", id: res["id"]} %></td>
         <% end %>
       <% else %>
         <td>No hay residentes</td>
@@ -56,7 +72,7 @@
     <tbody>
       <% if @films != []%>
         <% @films.each do |film| %>
-          <td class="hover"><%= link_to film[:name], {controller: "app", action: "film", url: film[:url]} %></td>
+          <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", id: film["id"]} %></td>
         <% end %>
       <% else %>
         <td>No aparece en películas</td>

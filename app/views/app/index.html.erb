@@ -16,12 +16,21 @@
     <tbody>
       <% @films.each do |film| %>
       <tr>
-        <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", url: film["url"]} %></td>
-        <td><%= film["episode_id"] %></td>
+        <%= film["id"] %>
+        <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", id: film["id"]} %></td>
+        <td><%= film["episodeID"] %></td>
         <td><%= film["director"] %></td>
-        <td><%= film["producer"] %></td>
-        <td><%= film["release_date"] %></td>
-        <td class="hover"><%= link_to "más info", {controller: "app", action: "film", url: film["url"]} %></td>
+        <% @producers = film["producers"] %>
+        <% @producers_show = "" %>
+        <% @producers.each do |producer| %>
+          <% @producers_show += producer + ", "%>
+        <% end %>
+        <% @producers_show = @producers_show[0..-3] %>
+        <td>
+          <%= @producers_show %>
+        </td>
+        <td><%= film["releaseDate"] %></td>
+        <td class="hover"><%= link_to "más info", {controller: "app", action: "film", id: film["id"]} %></td>
       </tr>
       <% end %>
     </tbody>

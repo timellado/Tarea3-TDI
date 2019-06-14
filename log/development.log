@@ -4018,3 +4018,714 @@ Processing by AppController#index as HTML
 Completed 200 OK in 2894ms (Views: 391.6ms)
 
 
+Started GET "/" for ::1 at 2019-06-10 15:04:44 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3629ms (Views: 1183.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 10:42:26 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1888ms (Views: 161.0ms)
+
+
+Started GET "/app/film?url=https%3A%2F%2Fswapi.co%2Fapi%2Ffilms%2F1%2F" for ::1 at 2019-06-14 10:48:26 -0400
+Processing by AppController#film as HTML
+  Parameters: {"url"=>"https://swapi.co/api/films/1/"}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 16364ms (Views: 34.1ms)
+
+
+Started GET "/peliculas" for ::1 at 2019-06-14 10:48:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/peliculas"):
+  
+actionpack (5.1.6.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-06-14 10:49:15 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 1062ms (Views: 26.1ms)
+
+
+Started GET "/app/film?url=https%3A%2F%2Fswapi.co%2Fapi%2Ffilms%2F1%2F" for ::1 at 2019-06-14 11:10:41 -0400
+Processing by AppController#film as HTML
+  Parameters: {"url"=>"https://swapi.co/api/films/1/"}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 16627ms (Views: 32.9ms)
+
+
+Started GET "/app/film?url=https%3A%2F%2Fswapi.co%2Fapi%2Ffilms%2F1%2F" for ::1 at 2019-06-14 11:44:06 -0400
+Processing by AppController#film as HTML
+  Parameters: {"url"=>"https://swapi.co/api/films/1/"}
+Completed 500 Internal Server Error in 104ms
+
+
+  
+NameError (undefined local variable or method `url' for #<AppController:0x00007f022d229288>
+Did you mean?  URI):
+  
+app/controllers/app_controller.rb:7:in `film'
+Started GET "/app/film?url=https%3A%2F%2Fswapi.co%2Fapi%2Ffilms%2F1%2F" for ::1 at 2019-06-14 11:46:02 -0400
+Processing by AppController#film as HTML
+  Parameters: {"url"=>"https://swapi.co/api/films/1/"}
+Completed 500 Internal Server Error in 127ms
+
+
+  
+NameError (undefined local variable or method `id' for #<AppController:0x00007f022d9ce740>):
+  
+app/controllers/app_controller.rb:13:in `film'
+Started GET "/" for ::1 at 2019-06-14 11:50:55 -0400
+Processing by AppController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `post' for AppController:Class):
+  
+app/controllers/app_controller.rb:179:in `index'
+Started GET "/" for ::1 at 2019-06-14 11:52:16 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 1321ms
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    16:     <tbody>
+    17:       <% @films.each do |film| %>
+    18:       <tr>
+    19:         <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", url: film["url"]} %></td>
+    20:         <td><%= film["episode_id"] %></td>
+    21:         <td><%= film["director"] %></td>
+    22:         <td><%= film["producer"] %></td>
+  
+app/views/app/index.html.erb:19:in `[]'
+app/views/app/index.html.erb:19:in `block in _app_views_app_index_html_erb__3021311558339792037_69823619442900'
+app/views/app/index.html.erb:17:in `each'
+app/views/app/index.html.erb:17:in `_app_views_app_index_html_erb__3021311558339792037_69823619442900'
+Started GET "/" for ::1 at 2019-06-14 11:54:39 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 1366ms
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    16:     <tbody>
+    17:       <% @films.each do |film| %>
+    18:       <tr>
+    19:         <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", id: film["id"]} %></td>
+    20:         <td><%= film["episode_id"] %></td>
+    21:         <td><%= film["director"] %></td>
+    22:         <td><%= film["producer"] %></td>
+  
+app/views/app/index.html.erb:19:in `[]'
+app/views/app/index.html.erb:19:in `block in _app_views_app_index_html_erb__3021311558339792037_69823620917460'
+app/views/app/index.html.erb:17:in `each'
+app/views/app/index.html.erb:17:in `_app_views_app_index_html_erb__3021311558339792037_69823620917460'
+Started GET "/" for ::1 at 2019-06-14 12:02:18 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (176.3ms)
+Completed 500 Internal Server Error in 2221ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x00007f02281149b0>:0x000055c785367a48>):
+    16:     <tbody>
+    17:       <% @films.each do |film| %>
+    18:       <tr>
+    19:         <%= id %>
+    20:         <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", id: film["id"]} %></td>
+    21:         <td><%= film["episode_id"] %></td>
+    22:         <td><%= film["director"] %></td>
+  
+app/views/app/index.html.erb:19:in `block in _app_views_app_index_html_erb__3021311558339792037_47157710998480'
+app/views/app/index.html.erb:17:in `each'
+app/views/app/index.html.erb:17:in `_app_views_app_index_html_erb__3021311558339792037_47157710998480'
+Started GET "/" for ::1 at 2019-06-14 12:02:37 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 2234ms
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    16:     <tbody>
+    17:       <% @films.each do |film| %>
+    18:       <tr>
+    19:         <%= film["id"] %>
+    20:         <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", id: film["id"]} %></td>
+    21:         <td><%= film["episode_id"] %></td>
+    22:         <td><%= film["director"] %></td>
+  
+app/views/app/index.html.erb:19:in `[]'
+app/views/app/index.html.erb:19:in `block in _app_views_app_index_html_erb__3021311558339792037_69823621224800'
+app/views/app/index.html.erb:17:in `each'
+app/views/app/index.html.erb:17:in `_app_views_app_index_html_erb__3021311558339792037_69823621224800'
+Started GET "/" for ::1 at 2019-06-14 12:03:04 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 1249ms
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    16:     <tbody>
+    17:       <% @films.each do |film| %>
+    18:       <tr>
+    19:         <%= film["id"].to_i %>
+    20:         <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", id: film["id"]} %></td>
+    21:         <td><%= film["episode_id"] %></td>
+    22:         <td><%= film["director"] %></td>
+  
+app/views/app/index.html.erb:19:in `[]'
+app/views/app/index.html.erb:19:in `block in _app_views_app_index_html_erb__3021311558339792037_69823661079620'
+app/views/app/index.html.erb:17:in `each'
+app/views/app/index.html.erb:17:in `_app_views_app_index_html_erb__3021311558339792037_69823661079620'
+Started GET "/" for ::1 at 2019-06-14 12:03:16 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 1047ms
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    16:     <tbody>
+    17:       <% @films.each do |film| %>
+    18:       <tr>
+    19:         <%= film["id"].to_s %>
+    20:         <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", id: film["id"]} %></td>
+    21:         <td><%= film["episode_id"] %></td>
+    22:         <td><%= film["director"] %></td>
+  
+app/views/app/index.html.erb:19:in `[]'
+app/views/app/index.html.erb:19:in `block in _app_views_app_index_html_erb__3021311558339792037_69823664313580'
+app/views/app/index.html.erb:17:in `each'
+app/views/app/index.html.erb:17:in `_app_views_app_index_html_erb__3021311558339792037_69823664313580'
+Started GET "/" for ::1 at 2019-06-14 12:10:07 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 1269ms (Views: 36.4ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:10:15 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 660ms (Views: 34.9ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:11:21 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 1337ms (Views: 41.6ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:15:28 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 1097ms (Views: 36.6ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:16:02 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 1389ms (Views: 31.9ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:16:16 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 1468ms (Views: 35.9ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:16:28 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1064ms (Views: 13.1ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:19:07 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 1179ms
+
+
+  
+ActionView::Template::Error (undefined method `-' for "Gary Kurtz, Rick McCallum, ":String
+Did you mean?  -@):
+    25:         <% @producers.each do |producer| %>
+    26:           <% @producers_show += producer + ", "%>
+    27:         <% end %>
+    28:         <% @producers_show -= ", " %>
+    29:         <td>
+    30:           <%= @producers_show %>
+    31:         </td>
+  
+app/views/app/index.html.erb:28:in `block in _app_views_app_index_html_erb__3021311558339792037_69823661569820'
+app/views/app/index.html.erb:17:in `each'
+app/views/app/index.html.erb:17:in `_app_views_app_index_html_erb__3021311558339792037_69823661569820'
+Started GET "/" for ::1 at 2019-06-14 12:19:44 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 1878ms
+
+
+  
+SyntaxError (/home/t_pc/Uc/2019-1/Taller De Integración/Tarea3-TDI/app/views/app/index.html.erb:28: syntax error, unexpected tINTEGER, expecting ']'
+...cers_show = @producers_show[:-2] 
+...                              ^
+/home/t_pc/Uc/2019-1/Taller De Integración/Tarea3-TDI/app/views/app/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/app/index.html.erb:28: syntax error, unexpected tINTEGER, expecting ']'
+app/views/app/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for ::1 at 2019-06-14 12:22:12 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1030ms (Views: 12.6ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:22:54 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 1483ms (Views: 34.5ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:22:58 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 1251ms (Views: 49.1ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:23:19 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 1365ms (Views: 34.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 12:23:46 -0400
+Processing by AppController#index as HTML
+  Rendering app/index.html.erb within layouts/application
+  Rendered app/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 1041ms (Views: 34.1ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:23:49 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 1218ms (Views: 36.2ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:25:25 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 1387ms (Views: 37.1ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:26:14 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 1283ms (Views: 41.3ms)
+
+
+Started GET "/app/person" for ::1 at 2019-06-14 12:26:26 -0400
+Processing by AppController#person as HTML
+Completed 500 Internal Server Error in 1466ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/app_controller.rb:90:in `person'
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:26:31 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 1249ms (Views: 37.4ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:28:12 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1412ms (Views: 15.3ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:28:35 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 1463ms (Views: 39.1ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:28:52 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 1720ms (Views: 35.4ms)
+
+
+Started GET "/app/person?id=cGVvcGxlOjE%3D" for ::1 at 2019-06-14 12:28:55 -0400
+Processing by AppController#person as HTML
+  Parameters: {"id"=>"cGVvcGxlOjE="}
+  Rendering app/person.html.erb within layouts/application
+  Rendered app/person.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 875ms (Views: 31.2ms)
+
+
+Started GET "/app/person?id=cGVvcGxlOjE%3D" for ::1 at 2019-06-14 12:29:47 -0400
+Processing by AppController#person as HTML
+  Parameters: {"id"=>"cGVvcGxlOjE="}
+  Rendering app/person.html.erb within layouts/application
+  Rendered app/person.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1269ms (Views: 13.4ms)
+
+
+Started GET "/app/person?id=cGVvcGxlOjE%3D" for ::1 at 2019-06-14 12:31:48 -0400
+Processing by AppController#person as HTML
+  Parameters: {"id"=>"cGVvcGxlOjE="}
+  Rendering app/person.html.erb within layouts/application
+  Rendered app/person.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1266ms (Views: 32.9ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjEy" for ::1 at 2019-06-14 12:31:54 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjEy"}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 1356ms (Views: 32.9ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjEy" for ::1 at 2019-06-14 12:32:27 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjEy"}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 1293ms (Views: 39.9ms)
+
+
+Started GET "/app/person?id=cGVvcGxlOjE%3D" for ::1 at 2019-06-14 12:32:37 -0400
+Processing by AppController#person as HTML
+  Parameters: {"id"=>"cGVvcGxlOjE="}
+  Rendering app/person.html.erb within layouts/application
+  Rendered app/person.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1313ms (Views: 33.1ms)
+
+
+Started GET "/app/planet?id=cGxhbmV0czox" for ::1 at 2019-06-14 12:32:43 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czox"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1015ms (Views: 30.4ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjEy" for ::1 at 2019-06-14 12:32:52 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjEy"}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1284ms (Views: 18.4ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjEy" for ::1 at 2019-06-14 12:33:17 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjEy"}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1290ms (Views: 35.4ms)
+
+
+Started GET "/app/person?id=cGVvcGxlOjk%3D" for ::1 at 2019-06-14 12:33:22 -0400
+Processing by AppController#person as HTML
+  Parameters: {"id"=>"cGVvcGxlOjk="}
+  Rendering app/person.html.erb within layouts/application
+  Rendered app/person.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 914ms (Views: 33.6ms)
+
+
+Started GET "/app/person?id=cGVvcGxlOjk%3D" for ::1 at 2019-06-14 12:34:31 -0400
+Processing by AppController#person as HTML
+  Parameters: {"id"=>"cGVvcGxlOjk="}
+  Rendering app/person.html.erb within layouts/application
+  Rendered app/person.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 1639ms (Views: 39.5ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:34:38 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 897ms (Views: 33.7ms)
+
+
+Started GET "/app/person?id=cGVvcGxlOjE%3D" for ::1 at 2019-06-14 12:34:42 -0400
+Processing by AppController#person as HTML
+  Parameters: {"id"=>"cGVvcGxlOjE="}
+  Rendering app/person.html.erb within layouts/application
+  Rendered app/person.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 1068ms (Views: 33.1ms)
+
+
+Started GET "/app/planet?id=cGxhbmV0czox" for ::1 at 2019-06-14 12:34:46 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czox"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1308ms (Views: 34.5ms)
+
+
+Started GET "/app/planet?id=cGxhbmV0czox" for ::1 at 2019-06-14 12:37:52 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czox"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (168.3ms)
+Completed 500 Internal Server Error in 1584ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `film' for #<#<Class:0x00007f022845d680>:0x00007f022d4633a0>
+Did you mean?  @films):
+    24:         <td><%=@planet["diameter"]%></td>
+    25:         <td><%=@planet["climate"]%></td>
+    26:         <td><%=@planet["gravity"]%></td>
+    27:         <% @terrains = film["terrains"] %>
+    28:         <% @terrains_show = "" %>
+    29:         <% @terrains.each do |terrain| %>
+    30:           <% @terrains_show += terrain + ", "%>
+  
+app/views/app/planet.html.erb:27:in `_app_views_app_planet_html_erb__763598681094557284_69823663137960'
+Started GET "/app/planet?id=cGxhbmV0czox" for ::1 at 2019-06-14 12:38:10 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czox"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 1250ms (Views: 47.1ms)
+
+
+Started GET "/app/planet?id=cGxhbmV0czox" for ::1 at 2019-06-14 12:39:08 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czox"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 1163ms (Views: 45.4ms)
+
+
+Started GET "/app/planet?id=cGxhbmV0czox" for ::1 at 2019-06-14 12:39:32 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czox"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 1615ms (Views: 44.5ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6Mw%3D%3D" for ::1 at 2019-06-14 12:39:39 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6Mw=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 1498ms (Views: 50.3ms)
+
+
+Started GET "/app/planet?id=cGxhbmV0czo3" for ::1 at 2019-06-14 12:39:43 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czo3"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1698ms (Views: 34.7ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjI%3D" for ::1 at 2019-06-14 12:39:49 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjI="}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 1069ms (Views: 32.3ms)
+
+
+Started GET "/app/planet?id=cGxhbmV0czox" for ::1 at 2019-06-14 12:40:05 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czox"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1606ms (Views: 32.6ms)
+
+
+Started GET "/app/planet?id=cGxhbmV0czox" for ::1 at 2019-06-14 12:41:52 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czox"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1339ms (Views: 15.8ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6MQ%3D%3D" for ::1 at 2019-06-14 12:42:02 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6MQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 1256ms (Views: 36.9ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjk%3D" for ::1 at 2019-06-14 12:42:06 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjk="}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1462ms (Views: 38.3ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjI%3D" for ::1 at 2019-06-14 12:42:38 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjI="}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 1549ms (Views: 32.5ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjM%3D" for ::1 at 2019-06-14 12:42:44 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjM="}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 956ms (Views: 31.0ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjU%3D" for ::1 at 2019-06-14 12:42:51 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjU="}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1490ms (Views: 32.2ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjI%3D" for ::1 at 2019-06-14 12:42:56 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjI="}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 1085ms (Views: 31.9ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjEy" for ::1 at 2019-06-14 12:44:03 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjEy"}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1389ms (Views: 14.0ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjEy" for ::1 at 2019-06-14 12:45:48 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjEy"}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 1157ms (Views: 38.3ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjEy" for ::1 at 2019-06-14 12:46:36 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjEy"}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 1591ms (Views: 33.9ms)
+
+
+Started GET "/app/starship?id=c3RhcnNoaXBzOjEy" for ::1 at 2019-06-14 12:47:12 -0400
+Processing by AppController#starship as HTML
+  Parameters: {"id"=>"c3RhcnNoaXBzOjEy"}
+  Rendering app/starship.html.erb within layouts/application
+  Rendered app/starship.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1572ms (Views: 33.7ms)
+
+
+Started GET "/app/person?id=cGVvcGxlOjE%3D" for ::1 at 2019-06-14 12:47:15 -0400
+Processing by AppController#person as HTML
+  Parameters: {"id"=>"cGVvcGxlOjE="}
+  Rendering app/person.html.erb within layouts/application
+  Rendered app/person.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 3276ms (Views: 34.0ms)
+
+
+Started GET "/app/planet?id=cGxhbmV0czox" for ::1 at 2019-06-14 12:47:20 -0400
+Processing by AppController#planet as HTML
+  Parameters: {"id"=>"cGxhbmV0czox"}
+  Rendering app/planet.html.erb within layouts/application
+  Rendered app/planet.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 1155ms (Views: 33.4ms)
+
+
+Started GET "/app/film?id=ZmlsbXM6NQ%3D%3D" for ::1 at 2019-06-14 12:47:23 -0400
+Processing by AppController#film as HTML
+  Parameters: {"id"=>"ZmlsbXM6NQ=="}
+  Rendering app/film.html.erb within layouts/application
+  Rendered app/film.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 1225ms (Views: 42.2ms)
+
+

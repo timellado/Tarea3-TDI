@@ -21,12 +21,12 @@
         <td><%=@person["name"]%></td>
         <td><%=@person["height"]%></td>
         <td><%=@person["mass"]%></td>
-        <td><%=@person["hair_color"]%></td>
-        <td><%=@person["skin_color"]%></td>
-        <td><%=@person["eye_color"]%></td>
-        <td><%=@person["birth_year"]%></td>
+        <td><%=@person["hairColor"]%></td>
+        <td><%=@person["skinColor"]%></td>
+        <td><%=@person["eyeColor"]%></td>
+        <td><%=@person["birthYear"]%></td>
         <td><%=@person["gender"]%></td>
-        <td class="hover"><%= link_to @origin_planet[:name], {controller: "app", action: "planet", url: @origin_planet[:url]} %></td>
+        <td class="hover"><%= link_to @origin_planet["name"], {controller: "app", action: "planet", id: @origin_planet["id"]} %></td>
       </tr>
     </tbody>
   </table>
@@ -39,7 +39,7 @@
     <tbody>
       <% if @films != [] %>
         <% @films.each do |film| %>
-          <td class="hover"><%= link_to film[:name], {controller: "app", action: "film", url: film[:url]} %></td>
+          <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", id: film["id"]} %></td>
         <% end %>
       <% else %>
         <td>No aparece en películas</td>
@@ -55,7 +55,7 @@
     <tbody>
       <% if @starship != [] %>
         <% @starships.each do |starship| %>
-        <td class="hover"><%= link_to starship[:name], {controller: "app", action: "starship", url: starship[:url]} %></td>
+        <td class="hover"><%= link_to starship["name"], {controller: "app", action: "starship", id: starship["id"]} %></td>
         <% end %>
       <% else %>
         <td>No aborda naves</td>

@@ -7,6 +7,7 @@
   <table>
     <thead>
       <th>Nombre</th>
+      <th>Descripción</th>
       <th>Episodio</th>
       <th>Director</th>
       <th>Productor(es)</th>
@@ -15,10 +16,19 @@
     <tbody>
       <tr>
         <td><%= @film["title"]%></td>
-        <td><%= @film["episode_id"] %></td>
+        <td><%= @film["openingCrawl"]%></td>
+        <td><%= @film["episodeID"] %></td>
         <td><%= @film["director"] %></td>
-        <td><%= @film["producer"] %></td>
-        <td><%= @film["release_date"] %></td>
+        <% @producers = @film["producers"] %>
+        <% @producers_show = "" %>
+        <% @producers.each do |producer| %>
+          <% @producers_show += producer + ", "%>
+        <% end %>
+        <% @producers_show = @producers_show[0..-3] %>
+        <td>
+          <%= @producers_show %>
+        </td>
+        <td><%= @film["releaseDate"] %></td>
       </tr>
     </tbody>
   </table>
@@ -30,7 +40,7 @@
     </thead>
     <tbody>
       <% @people.each do |person| %>
-        <td class="hover"><%= link_to person[:name], {controller: "app", action: "person", url: person[:url]} %></td>
+        <td class="hover"><%= link_to person["name"], {controller: "app", action: "person", id: person["id"]} %></td>
       <% end %>
     </tbody>
   </table>
@@ -42,7 +52,7 @@
     </thead>
     <tbody>
         <% @planets.each do |planet| %>
-        <td class="hover"><%= link_to planet[:name], {controller: "app", action: "planet", url: planet[:url]} %></td>
+        <td class="hover"><%= link_to planet["name"], {controller: "app", action: "planet", id: planet["id"]} %></td>
         <% end %>
     </tbody>
   </table>
@@ -54,7 +64,7 @@
     </thead>
     <tbody>
         <% @starships.each do |starship| %>
-        <td class="hover"><%= link_to starship[:name], {controller: "app", action: "starship", url: starship[:url]} %></td>
+        <td class="hover"><%= link_to starship["name"], {controller: "app", action: "starship", id: starship["id"]} %></td>
         <% end %>
     </tbody>
   </table>

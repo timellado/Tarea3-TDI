@@ -8,7 +8,7 @@
     <thead>
       <th>Nombre</th>
       <th>Modelo</th>
-      <th>Manufacturero</th>
+      <th>Manufacturero(s)</th>
       <th>Costo en creditos</th>
       <th>Largo</th>
       <th>Velocidad en atmósfera (máx)</th>
@@ -24,17 +24,25 @@
       <tr>
         <td><%=@starship["name"]%></td>
         <td><%=@starship["model"]%></td>
-        <td><%=@starship["manufacturer"]%></td>
-        <td><%=@starship["cost_in_credits"]%></td>
+        <% @manufacturers = @starship["manufacturers"] %>
+        <% @manufacturers_show = "" %>
+        <% @manufacturers.each do |manufacturer| %>
+          <% @manufacturers_show += manufacturer + ", "%>
+        <% end %>
+        <% @manufacturers_show = @manufacturers_show[0..-3] %>
+        <td>
+          <%= @manufacturers_show %>
+        </td>
+        <td><%=@starship["costInCredits"]%></td>
         <td><%=@starship["length"]%></td>
-        <td><%=@starship["max_atmosphering_speed"]%></td>
+        <td><%=@starship["maxAtmospheringSpeed"]%></td>
         <td><%=@starship["crew"]%></td>
         <td><%=@starship["passengers"]%></td>
-        <td><%=@starship["cargo_capacity"]%></td>
+        <td><%=@starship["cargoCapacity"]%></td>
         <td><%=@starship["consumables"]%></td>
-        <td><%=@starship["hyperdrive_rating"]%></td>
+        <td><%=@starship["hyperdriveRating"]%></td>
         <td><%=@starship["MGLT"]%></td>
-        <td><%=@starship["starship_class"]%></td>
+        <td><%=@starship["starshipClass"]%></td>
       </tr>
     </tbody>
   </table>
@@ -47,7 +55,7 @@
     <tbody>
       <% if @pilots != [] %>
         <% @pilots.each do |pil| %>
-          <td class="hover"><%= link_to pil[:name], {controller: "app", action: "person", url: pil[:url]} %></td>
+          <td class="hover"><%= link_to pil["name"], {controller: "app", action: "person", id: pil["id"]} %></td>
         <% end %>
       <% else %>
         <td>No tiene pilotos designados</td>
@@ -63,7 +71,7 @@
     <tbody>
       <% if @films != []%>
         <% @films.each do |film| %>
-          <td class="hover"><%= link_to film[:name], {controller: "app", action: "film", url: film[:url]} %></td>
+          <td class="hover"><%= link_to film["title"], {controller: "app", action: "film", id: film["id"]} %></td>
         <% end %>
       <% else %>
         <td>No aparece en películas</td>
