@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'httparty', '~> 0.16.4'
+gem 'httparty', '~> 0.21.0'
 
 gem "actionview", ">= 5.1.6.2"
 
